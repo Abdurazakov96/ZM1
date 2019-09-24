@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C31D787233A9A550058E3C3 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C31D786233A9A550058E3C3 /* MenuCell.swift */; };
+		6C31D789233AA0E50058E3C3 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C31D788233AA0E50058E3C3 /* OrderCell.swift */; };
 		6CA72C7F232D4DF1007C3FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA72C7E232D4DF1007C3FC0 /* AppDelegate.swift */; };
 		6CA72C84232D4DF1007C3FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CA72C82232D4DF1007C3FC0 /* Main.storyboard */; };
 		6CA72C86232D4DF2007C3FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CA72C85232D4DF2007C3FC0 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C31D786233A9A550058E3C3 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		6C31D788233AA0E50058E3C3 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		6CA72C7B232D4DF1007C3FC0 /* ZM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA72C7E232D4DF1007C3FC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CA72C83232D4DF1007C3FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				6CA72CA723353985007C3FC0 /* itemViewController.swift */,
 				6CA72CC923365804007C3FC0 /* OrderTableViewController.swift */,
 				6CA72CCD2337D582007C3FC0 /* OrderConfirmationViewController.swift */,
+				6C31D786233A9A550058E3C3 /* MenuCell.swift */,
+				6C31D788233AA0E50058E3C3 /* OrderCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 				6CA72C98232E5482007C3FC0 /* MenuItem.swift in Sources */,
 				6CA72CA6232EA661007C3FC0 /* MenuTableViewController.swift in Sources */,
 				6CA72C9A232E6179007C3FC0 /* MenuItems.swift in Sources */,
+				6C31D789233AA0E50058E3C3 /* OrderCell.swift in Sources */,
 				6CA72CD02337ED19007C3FC0 /* PreparationTime.swift in Sources */,
 				6CA72C9D232E678C007C3FC0 /* NetworkManager.swift in Sources */,
 				6CA72CCE2337D582007C3FC0 /* OrderConfirmationViewController.swift in Sources */,
@@ -244,6 +251,7 @@
 				6CA72C7F232D4DF1007C3FC0 /* AppDelegate.swift in Sources */,
 				6CA72CAA23365472007C3FC0 /* Order.swift in Sources */,
 				6CA72C96232E32B9007C3FC0 /* Categories.swift in Sources */,
+				6C31D787233A9A550058E3C3 /* MenuCell.swift in Sources */,
 				6CA72CCC23365880007C3FC0 /* OrderManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

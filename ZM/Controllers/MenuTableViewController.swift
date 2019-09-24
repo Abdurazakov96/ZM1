@@ -10,6 +10,9 @@ import UIKit
 
 class MenuTableViewController: UITableViewController {
     
+    
+    
+    
     let cellManager = CellManager()
     let networkManager = NetworkManager()
     var category: String!
@@ -37,13 +40,15 @@ class MenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell")!
-   cellManager.configure(cell, with: menuItems[indexPath.row], for: tableView, indexPath: indexPath)
-        return cell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell")! as? MenuCell
+        
+        cellManager.configureForMenu(cell!, with: menuItems[indexPath.row], for: tableView, indexPath: indexPath)
+        return cell!
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 100
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

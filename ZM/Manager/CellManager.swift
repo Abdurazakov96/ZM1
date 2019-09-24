@@ -13,17 +13,17 @@ class CellManager {
         cell.textLabel?.text = category.localizedCapitalized
     }
     
-    func configure(
-        _ cell: UITableViewCell,
+    func configureForMenu(
+        _ cell: MenuCell,
         with menuItem: MenuItem,
         for tableView: UITableView,
         indexPath: IndexPath
         ) {
-        cell.textLabel?.text = menuItem.name
-        cell.detailTextLabel?.text = String(menuItem.price)
-        
+        cell.nameLabel.text = menuItem.name
+        cell.priceLabel.text = String(menuItem.price)
+
         if let imageData = menuItem.image {
-            cell.imageView?.image = UIImage(data: imageData) } else {
+            cell.imageFood?.image = UIImage(data: imageData) } else {
             
             networkManager.getImage(menuItem.image_url) { data, error in
                 
@@ -39,6 +39,31 @@ class CellManager {
         
     }
     
+    func configureForOrder(
+        _ cell: OrderCell,
+        with menuItem: MenuItem,
+        for tableView: UITableView,
+        indexPath: IndexPath
+        ) {
+        cell.nameLabel.text = menuItem.name
+        cell.priceLabel.text = String(menuItem.price)
+        
+        if let imageData = menuItem.image {
+            cell.imageOrder?.image = UIImage(data: imageData) } else {
+            
+            networkManager.getImage(menuItem.image_url) { data, error in
+                
+                menuItem.image = data
+                DispatchQueue.main.async {
+                    tableView.reloadRows(at: [indexPath], with: .automatic)
+                }
+                
+                
+            }
+            
+        }
+        
+    }
  
 }
 
