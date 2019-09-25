@@ -12,12 +12,12 @@ import UIKit
 class NetworkManager: Codable {
     
     
-    //Mark: Public properties
+    //MARK: Public properties
     
     let baseURL = URL(string: "http://localhost:8090")
     
     
-    //Mark: Public methods
+    //MARK: Public methods
     
     func getCategories(completion: @escaping([String]?,Error?) -> Void){
         let url = baseURL?.appendingPathComponent("categories")

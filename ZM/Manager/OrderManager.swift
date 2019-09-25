@@ -12,7 +12,7 @@ import Foundation
 class OrderManager {
     
     
-    //Mark: Public properties
+    //MARK: Public properties
     
     static let orderUpdatedNotification = Notification.Name("OrderManager.orderUpdated")
     static var shared = OrderManager()

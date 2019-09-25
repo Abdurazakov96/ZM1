@@ -12,12 +12,12 @@ import UIKit
 class CellManager {
     
     
-    //Mark: Public properties
+    //MARK: Public properties
     
     let networkManager = NetworkManager()
     
     
-    //Mark: Public methods
+    //MARK: Public methods
     
     func configure(_ cell: UITableViewCell, with category: String) {
         cell.textLabel?.text = category.localizedCapitalized

@@ -12,7 +12,7 @@ import Foundation
 extension URL {
     
     
-    //Mark: Public methods
+    //MARK: Public methods
     
     func withQueries(_ queries: [String: String]) -> URL? {
         var components = URLComponents(url: self, resolvingAgainstBaseURL: true)

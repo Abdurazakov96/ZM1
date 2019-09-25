@@ -12,7 +12,7 @@ import UIKit
 class MenuItem:Codable {
     
     
-    //Mark: Public Properties
+    //MARK: Public Properties
     
     let id: Int
     let description: String
@@ -23,7 +23,7 @@ class MenuItem:Codable {
     var name: String
     
     
-    //Mark: Init
+    //MARK: Init
     
     init(
         id: Int,

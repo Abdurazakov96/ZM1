@@ -12,7 +12,7 @@ import Foundation
 struct PreparationTime: Codable {
     
     
-    //Mark: Public Properties
+    //MARK: Public Properties
     
     let prepTime: Int
     

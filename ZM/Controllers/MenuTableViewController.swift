@@ -12,7 +12,7 @@ import UIKit
 class MenuTableViewController: UITableViewController {
     
     
-    //Mark: Public properties
+    //MARK: Public properties
     
     let cellManager = CellManager()
     let networkManager = NetworkManager()
@@ -20,7 +20,7 @@ class MenuTableViewController: UITableViewController {
     var menuItems = [MenuItem]()
     
     
-    //Mark: Overriden methods
+    //MARK: Overriden methods
     
     override func viewDidLoad() {
         super.viewDidLoad()

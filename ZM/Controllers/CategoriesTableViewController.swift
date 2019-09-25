@@ -12,14 +12,14 @@ import UIKit
 class CategoriesTableViewController: UITableViewController {
     
     
-    //Mark: Public properties
+    //MARK: Public properties
     
     let cellManager = CellManager()
     let network = NetworkManager()
     var categories = [String]()
     
     
-    //Mark: Public methods
+    //MARK: Public methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class CategoriesTableViewController: UITableViewController {
     }
     
     
-    //Mark: Overriden methods
+    //MARK: Overriden methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "MenuSegue" else { return }

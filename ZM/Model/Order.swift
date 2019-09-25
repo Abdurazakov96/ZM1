@@ -12,12 +12,12 @@ import Foundation
 struct Order {
     
     
-    //Mark: Public properties
+    //MARK: Public properties
     
     var MenuItems = [MenuItem]()
     
     
-    //Mark: Init
+    //MARK: Init
     
     init(menuItems: [MenuItem] = []){
         self.MenuItems = menuItems

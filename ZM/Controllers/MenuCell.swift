@@ -12,7 +12,7 @@ import UIKit
 class MenuCell: UITableViewCell {
 
 
-    //Mark: IBOtlets
+    //MARK: IBOtlets
     
     @IBOutlet var imageFood: UIImageView!
     @IBOutlet var priceLabel: UILabel!

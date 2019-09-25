@@ -12,7 +12,8 @@ import UIKit
 class OrderCell: UITableViewCell {
 
     
-    //Mark: IBOtlets
+    //MARK: IBOtlets
+    
     @IBOutlet var imageOrder: UIImageView!
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!

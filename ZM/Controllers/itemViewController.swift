@@ -12,7 +12,7 @@ import UIKit
 class itemViewController: UIViewController {
     
     
-    //Mark: IBOutlets
+    //MARK: IBOutlets
     
     @IBOutlet var image: UIImageView!
     @IBOutlet var priceLabel: UILabel!
@@ -20,12 +20,12 @@ class itemViewController: UIViewController {
     @IBOutlet var addButton: UIButton!
     
     
-    //Mark: Public properties
+    //MARK: Public properties
     
     var menuItem: MenuItem?
     
     
-    //Mark: Overriden methods
+    //MARK: Overriden methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class itemViewController: UIViewController {
     }
     
     
-    //Mark: IBAction
+    //MARK: IBAction
     
     @IBAction func addFoodButton(_ sender: Any) {
         UIView.animateKeyframes(withDuration: 1.3, delay: 0, animations: {
@@ -48,7 +48,7 @@ class itemViewController: UIViewController {
     }
     
     
-    //Mark: Public methods
+    //MARK: Public methods
     
 
     func updateUI() {

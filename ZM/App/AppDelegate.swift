@@ -13,13 +13,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
-    //Mark: Public properties
+    //MARK: Public properties
     
     var window: UIWindow?
     static var orderTabBarItem: UITabBarItem!
     
     
-    //Mark: Public methods
+    //MARK: Public methods
     
     @objc func changeTabBarItem() {
         let count = OrderManager.shared.order.MenuItems.count

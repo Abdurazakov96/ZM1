@@ -12,14 +12,14 @@ import UIKit
 class OrderTableViewController: UITableViewController {
     
     
-    //Mark: Public properties
+    //MARK: Public properties
     
     var networkManager = NetworkManager()
     var cellManager = CellManager()
     var minutes = 0
     
     
-    //Mark: Overriden methods
+    //MARK: Overriden methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +77,7 @@ class OrderTableViewController: UITableViewController {
     }
     
     
-    //Mark: IBActions
+    //MARK: IBActions
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         OrderManager.shared.order = Order()
@@ -108,7 +108,7 @@ class OrderTableViewController: UITableViewController {
     }
 
 
-    //Mark: Publish methods
+    //MARK: Publish methods
     
     func uploadOrder() {
         let menuIDs = OrderManager.shared.order.MenuItems.map { $0.id }

@@ -12,7 +12,7 @@ import Foundation
 struct Categories:Codable {
     
     
-    //Mark: Public Properties
+    //MARK: Public Properties
     
     var categories: [String]
 }

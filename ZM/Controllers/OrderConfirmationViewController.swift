@@ -12,16 +12,16 @@ import UIKit
 class OrderConfirmationViewController: UIViewController {
     
     
-    //Mark: IBOtlet
+    //MARK: IBOtlet
     @IBOutlet var timeRemainingLabel: UILabel!
     
     
-    //Mark: Public properties
+    //MARK: Public properties
     
     var minutes: Int!
     
     
-    //Mark: Overriden methods
+    //MARK: Overriden methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
