@@ -7,8 +7,18 @@
 //
 
 import UIKit
+
+
 class CellManager {
+    
+    
+    //Mark: Public properties
+    
     let networkManager = NetworkManager()
+    
+    
+    //Mark: Public methods
+    
     func configure(_ cell: UITableViewCell, with category: String) {
         cell.textLabel?.text = category.localizedCapitalized
     }
@@ -21,18 +31,16 @@ class CellManager {
         ) {
         cell.nameLabel.text = menuItem.name
         cell.priceLabel.text = String(menuItem.price)
-
+        
         if let imageData = menuItem.image {
             cell.imageFood?.image = UIImage(data: imageData) } else {
-            
             networkManager.getImage(menuItem.image_url) { data, error in
-                
                 menuItem.image = data
+                
                 DispatchQueue.main.async {
                     tableView.reloadRows(at: [indexPath], with: .automatic)
                 }
-                
-                
+ 
             }
             
         }
@@ -50,21 +58,19 @@ class CellManager {
         
         if let imageData = menuItem.image {
             cell.imageOrder?.image = UIImage(data: imageData) } else {
-            
             networkManager.getImage(menuItem.image_url) { data, error in
-                
                 menuItem.image = data
+                
                 DispatchQueue.main.async {
                     tableView.reloadRows(at: [indexPath], with: .automatic)
                 }
-                
                 
             }
             
         }
         
     }
- 
+    
 }
 
 

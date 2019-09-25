@@ -8,14 +8,22 @@
 
 import UIKit
 
+
 class MenuItem:Codable {
+    
+    
+    //Mark: Public Properties
+    
     let id: Int
-    var name: String
     let description: String
     let price: Int
     let category: String
     let image_url: URL
     var image: Data?
+    var name: String
+    
+    
+    //Mark: Init
     
     init(
         id: Int,

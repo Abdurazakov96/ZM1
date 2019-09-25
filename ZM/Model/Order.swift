@@ -7,8 +7,17 @@
 //
 
 import Foundation
+
+
 struct Order {
+    
+    
+    //Mark: Public properties
+    
     var MenuItems = [MenuItem]()
+    
+    
+    //Mark: Init
     
     init(menuItems: [MenuItem] = []){
         self.MenuItems = menuItems

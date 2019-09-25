@@ -7,37 +7,37 @@
 //
 
 import UIKit
+
+
 class NetworkManager: Codable {
+    
+    
+    //Mark: Public properties
+    
     let baseURL = URL(string: "http://localhost:8090")
+    
+    
+    //Mark: Public methods
     
     func getCategories(completion: @escaping([String]?,Error?) -> Void){
         let url = baseURL?.appendingPathComponent("categories")
-        
         let task =  URLSession.shared.dataTask(with: url!) {data, _, error in
             guard let data = data else {return}
-            
             let decoder = JSONDecoder()
             guard   let decoderData = try? decoder.decode(Categories.self, from: data) else {return}
             completion(decoderData.categories, nil)
-            
         }
         task.resume()
     }
     
     func getMenuItems(for category: String, completion: @escaping([MenuItem]?, Error?) -> Void) {
         let initialUrl = baseURL?.appendingPathComponent("menu")
-        
         guard let url = initialUrl?.withQueries(["category": category]) else {return}
-        
         let task = URLSession.shared.dataTask(with: url) {data, _, Error in
             guard let data = data else {return}
-            
             let decoder = JSONDecoder()
             guard   let decoderData = try? decoder.decode(MenuItems.self, from: data) else {return}
             completion(decoderData.items, nil)
-            
-            
-            
         }
         task.resume()
         
@@ -49,7 +49,6 @@ class NetworkManager: Codable {
         guard let url = components?.url else {return}
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {return}
-         
             completion(data, nil)
         }
         task.resume()
@@ -84,4 +83,5 @@ class NetworkManager: Codable {
         }
         task.resume()
     }
+    
 }

@@ -8,7 +8,12 @@
 
 import Foundation
 
+
 struct PreparationTime: Codable {
+    
+    
+    //Mark: Public Properties
+    
     let prepTime: Int
     
     enum CodingKeys: String, CodingKey {

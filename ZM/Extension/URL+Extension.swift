@@ -8,7 +8,12 @@
 
 import Foundation
 
+
 extension URL {
+    
+    
+    //Mark: Public methods
+    
     func withQueries(_ queries: [String: String]) -> URL? {
         var components = URLComponents(url: self, resolvingAgainstBaseURL: true)
         components?.queryItems = queries.map {
@@ -16,4 +21,5 @@ extension URL {
         }
         return components?.url
     }
+    
 }

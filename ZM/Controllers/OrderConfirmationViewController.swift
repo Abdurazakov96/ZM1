@@ -8,11 +8,20 @@
 
 import UIKit
 
-class OrderConfirmationViewController: UIViewController {
 
+class OrderConfirmationViewController: UIViewController {
+    
+    
+    //Mark: IBOtlet
     @IBOutlet var timeRemainingLabel: UILabel!
     
+    
+    //Mark: Public properties
+    
     var minutes: Int!
+    
+    
+    //Mark: Overriden methods
     
     override func viewDidLoad() {
         super.viewDidLoad()

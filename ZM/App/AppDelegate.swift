@@ -8,11 +8,18 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    
+    //Mark: Public properties
+    
     var window: UIWindow?
     static var orderTabBarItem: UITabBarItem!
+    
+    
+    //Mark: Public methods
     
     @objc func changeTabBarItem() {
         let count = OrderManager.shared.order.MenuItems.count
@@ -25,10 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         URLCache.shared = urlCache
         let tabBarController = window?.rootViewController as? UITabBarController
         AppDelegate.orderTabBarItem = tabBarController?.viewControllers![1].tabBarItem
-        
         NotificationCenter.default.addObserver(self, selector: #selector (changeTabBarItem), name: OrderManager.orderUpdatedNotification, object: nil)
         return true
     }
-
+    
 }
-   
+

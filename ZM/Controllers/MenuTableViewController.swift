@@ -8,10 +8,11 @@
 
 import UIKit
 
+
 class MenuTableViewController: UITableViewController {
     
     
-    
+    //Mark: Public properties
     
     let cellManager = CellManager()
     let networkManager = NetworkManager()
@@ -19,10 +20,12 @@ class MenuTableViewController: UITableViewController {
     var menuItems = [MenuItem]()
     
     
+    //Mark: Overriden methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = category.localizedCapitalized
+        
         networkManager.getMenuItems(for: category) { menuItems, error in
             guard let menuItems = menuItems else {return}
             self.menuItems = menuItems
@@ -30,19 +33,18 @@ class MenuTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+        
         }
         
     }
-    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuItems.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell")! as? MenuCell
-        
+       
         cellManager.configureForMenu(cell!, with: menuItems[indexPath.row], for: tableView, indexPath: indexPath)
         return cell!
     }
@@ -56,6 +58,6 @@ class MenuTableViewController: UITableViewController {
         guard let menuItemIndex = tableView.indexPathForSelectedRow else {return}
         let destination = segue.destination as? itemViewController
         destination?.menuItem = menuItems[menuItemIndex.row]
-        
     }
+    
 }

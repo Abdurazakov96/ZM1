@@ -7,6 +7,12 @@
 //
 
 import Foundation
+
+
 struct MenuItems:Codable {
+    
+    
+    //Mark: Public Properties
+    
     var items:[MenuItem]
 }

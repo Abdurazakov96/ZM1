@@ -8,25 +8,34 @@
 
 import UIKit
 
+
 class CategoriesTableViewController: UITableViewController {
+    
+    
+    //Mark: Public properties
+    
+    let cellManager = CellManager()
     let network = NetworkManager()
     var categories = [String]()
-    let cellManager = CellManager()
+    
+    
+    //Mark: Public methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         network.getCategories {categories, error  in
-            guard let categories = categories else {return}
+            guard let categories = categories else { return }
             self.categories = categories
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+            
         }
-        
-        
     }
+    
+    
+    //Mark: Overriden methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "MenuSegue" else { return }
@@ -34,8 +43,6 @@ class CategoriesTableViewController: UITableViewController {
         let destination = segue.destination as! MenuTableViewController
         destination.category = categories[categoryIndex.row]
     }
-    
-    // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
