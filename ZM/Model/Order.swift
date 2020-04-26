@@ -7,15 +7,11 @@
 //
 
 import Foundation
-
-
 struct Order {
-    
     
     //MARK: Public properties
     
     var MenuItems = [MenuItem]()
-    
     
     //MARK: Init
     

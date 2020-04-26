@@ -11,7 +11,6 @@ import UIKit
 
 class OrderCell: UITableViewCell {
 
-    
     //MARK: IBOtlets
     
     @IBOutlet var imageOrder: UIImageView!

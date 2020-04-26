@@ -11,14 +11,12 @@ import UIKit
 
 class MenuTableViewController: UITableViewController {
     
-    
     //MARK: Public properties
     
     let cellManager = CellManager()
     let networkManager = NetworkManager()
     var category: String!
     var menuItems = [MenuItem]()
-    
     
     //MARK: Overriden methods
     

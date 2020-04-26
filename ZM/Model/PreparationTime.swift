@@ -7,10 +7,7 @@
 //
 
 import Foundation
-
-
 struct PreparationTime: Codable {
-    
     
     //MARK: Public Properties
     

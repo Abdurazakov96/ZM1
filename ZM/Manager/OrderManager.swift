@@ -11,7 +11,6 @@ import Foundation
 
 class OrderManager {
     
-    
     //MARK: Public properties
     
     static let orderUpdatedNotification = Notification.Name("OrderManager.orderUpdated")
@@ -20,6 +19,7 @@ class OrderManager {
         didSet{
             NotificationCenter.default.post(name: OrderManager.orderUpdatedNotification, object: nil)
         }
+        
     }
     
 }

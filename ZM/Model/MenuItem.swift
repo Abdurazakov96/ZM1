@@ -7,10 +7,7 @@
 //
 
 import UIKit
-
-
 class MenuItem:Codable {
-    
     
     //MARK: Public Properties
     
@@ -21,7 +18,6 @@ class MenuItem:Codable {
     let image_url: URL
     var image: Data?
     var name: String
-    
     
     //MARK: Init
     

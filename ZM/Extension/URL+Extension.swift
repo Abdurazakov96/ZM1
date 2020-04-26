@@ -11,7 +11,6 @@ import Foundation
 
 extension URL {
     
-    
     //MARK: Public methods
     
     func withQueries(_ queries: [String: String]) -> URL? {

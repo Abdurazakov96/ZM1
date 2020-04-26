@@ -11,11 +11,9 @@ import UIKit
 
 class NetworkManager: Codable {
     
-    
     //MARK: Public properties
     
     let baseURL = URL(string: "http://localhost:8090")
-    
     
     //MARK: Public methods
     

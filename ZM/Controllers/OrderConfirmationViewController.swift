@@ -11,15 +11,12 @@ import UIKit
 
 class OrderConfirmationViewController: UIViewController {
     
-    
     //MARK: IBOtlet
     @IBOutlet var timeRemainingLabel: UILabel!
-    
     
     //MARK: Public properties
     
     var minutes: Int!
-    
     
     //MARK: Overriden methods
     
@@ -27,5 +24,6 @@ class OrderConfirmationViewController: UIViewController {
         super.viewDidLoad()
         timeRemainingLabel.text = "Thank you for your order!  Your waiting time is approximately \(minutes!) minutes."
     }
+    
 }
 

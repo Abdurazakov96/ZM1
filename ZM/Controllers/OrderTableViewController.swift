@@ -11,13 +11,11 @@ import UIKit
 
 class OrderTableViewController: UITableViewController {
     
-    
     //MARK: Public properties
     
     var networkManager = NetworkManager()
     var cellManager = CellManager()
     var minutes = 0
-    
     
     //MARK: Overriden methods
     
@@ -74,8 +72,8 @@ class OrderTableViewController: UITableViewController {
         default:
             break
         }
+        
     }
-    
     
     //MARK: IBActions
     
@@ -107,7 +105,6 @@ class OrderTableViewController: UITableViewController {
         }
     }
 
-
     //MARK: Publish methods
     
     func uploadOrder() {
@@ -127,7 +124,9 @@ class OrderTableViewController: UITableViewController {
                 }
                 
             }
+            
         }
+        
     }
     
 }

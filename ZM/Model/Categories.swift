@@ -7,10 +7,7 @@
 //
 
 import Foundation
-
-
 struct Categories:Codable {
-    
     
     //MARK: Public Properties
     

@@ -11,7 +11,6 @@ import UIKit
 
 class itemViewController: UIViewController {
     
-    
     //MARK: IBOutlets
     
     @IBOutlet var image: UIImageView!
@@ -19,11 +18,9 @@ class itemViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var addButton: UIButton!
     
-    
     //MARK: Public properties
     
     var menuItem: MenuItem?
-    
     
     //MARK: Overriden methods
     
@@ -33,7 +30,6 @@ class itemViewController: UIViewController {
         
         updateUI()
     }
-    
     
     //MARK: IBAction
     
@@ -47,10 +43,8 @@ class itemViewController: UIViewController {
         OrderManager.shared.order.MenuItems.append(menuItemConst)
     }
     
-    
     //MARK: Public methods
     
-
     func updateUI() {
         image.image = UIImage(data: menuItem!.image!)
         priceLabel.text = String(menuItem!.price)

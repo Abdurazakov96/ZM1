@@ -11,11 +11,9 @@ import UIKit
 
 class CellManager {
     
-    
     //MARK: Public properties
     
     let networkManager = NetworkManager()
-    
     
     //MARK: Public methods
     

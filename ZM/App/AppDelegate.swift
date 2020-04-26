@@ -12,12 +12,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    
     //MARK: Public properties
     
     var window: UIWindow?
     static var orderTabBarItem: UITabBarItem!
-    
     
     //MARK: Public methods
     

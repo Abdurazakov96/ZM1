@@ -11,13 +11,11 @@ import UIKit
 
 class CategoriesTableViewController: UITableViewController {
     
-    
     //MARK: Public properties
     
     let cellManager = CellManager()
     let network = NetworkManager()
     var categories = [String]()
-    
     
     //MARK: Overriden methods
     

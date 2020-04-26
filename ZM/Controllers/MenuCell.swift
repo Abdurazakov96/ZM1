@@ -11,7 +11,6 @@ import UIKit
 
 class MenuCell: UITableViewCell {
 
-
     //MARK: IBOtlets
     
     @IBOutlet var imageFood: UIImageView!

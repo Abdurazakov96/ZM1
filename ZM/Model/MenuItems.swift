@@ -7,10 +7,7 @@
 //
 
 import Foundation
-
-
 struct MenuItems:Codable {
-    
     
     //MARK: Public Properties
     
