@@ -19,7 +19,7 @@ class CategoriesTableViewController: UITableViewController {
     var categories = [String]()
     
     
-    //MARK: Public methods
+    //MARK: Overriden methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +33,6 @@ class CategoriesTableViewController: UITableViewController {
             
         }
     }
-    
-    
-    //MARK: Overriden methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "MenuSegue" else { return }
